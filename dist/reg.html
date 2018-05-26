@@ -2,9 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>reg</title>
+    <link rel="stylesheet" href="css/reg.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reg.js"></script>
 </head>
 <body>
 
+<!--用户协议-->
+<div id="user-pact">
+    <span>X</span>
+    <h3>注册协议</h3>
+    <p><b>【审慎阅读】</b>您在申请注册流程中点击同意前，应当认真阅读以下协议。<b class="weight">请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：</b></p>
+    <p>1、<b class="weight">与您约定免除或限制责任的条款；</b></p>
+    <p>2、<b class="weight">与您约定法律适用和管辖的条款；</b></p>
+    <p>3、<b class="weight">其他以粗体下划线标识的重要条款。</b></p>
+    <p>如您对协议有任何疑问，可向平台客服咨询。</p>
+    <p><b>【特别提示】</b>当您按照注册页面提示填写信息、阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台服务与淘宝发生争议的，适用《淘宝平台服务协议》处理。如您在使用平台服务过程中与其他用户发生争议的，依您与其他用户达成的协议处理。</p>
+    <p class="weight"><b>阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。</b></p>
+    <a href="">《淘宝平台服务协议》</a>
+    <a href="">《法律声明及隐私权政策》</a>
+    <a href="">《支付宝服务协议》</a>
+    <input type="button" id="agree" value="同意协议">
+</div>
+
+<!--小蜜-->
+<div id="xiaomi">
+    <span>&#xe646;</span>
+    有问题？找小蜜
+</div>
+
+<!--头-->
+<header>
+    <p class="now">&#xe628;<span>设置用户名</span></p>
+    <p>&#xe62a;<span>填写账号信息</span></p>
+    <p>&#xe62c;<span>设置支付方式</span></p>
+    <p>&#xe600;<span>注册成功</span></p>
+</header>
+
+<!--content-->
+<div id="content1" class="content">
+    <div>
+        <span>手机号</span>
+        <div id="on">
+            <b>中国大陆</b><span>&or;</span><b>+86</b>
+            <ul>
+                <li><span>中国大陆</span><span>+86</span></li>
+                <li><span>中国大陆</span><span>+86</span></li>
+                <li><span>中国大陆</span><span>+86</span></li>
+                <li><span>中国大陆</span><span>+86</span></li>
+                <li><span>中国大陆</span><span>+86</span></li>
+            </ul>
+        </div>
+        <input type="text" id="tell" placeholder="请输入你的手机号">
+        <span></span>
+    </div>
+    <div>
+        <span>验证</span>
+        <div class="outer">
+            <div class="filter-box">按住滑块滑动到最右边</div>
+            <span>
+            按住滑块滑动到最右边
+            </span>
+            <div class="inner">&gt;&gt;</div>
+        </div>
+    </div>
+    <div>
+        <input type="button" class="next" id="next1" value="下一步">
+    </div>
+</div>
+<div id="content2" class="content">
+    <div>
+        <span>用户名</span>
+        <input type="text" id="username" placeholder="请输入用户名">
+        <span></span>
+    </div>
+    <div>
+        <span>密码</span>
+        <input type="password" id="pwd">
+        <span></span>
+    </div>
+    <div>
+        <span>重复密码</span>
+        <input type="password" id="pwd-re">
+        <span></span>
+    </div>
+    <div>
+        <input type="button" class="next" id="next2" value="下一步">
+    </div>
+</div>
+<div id="content3" class="content">
+    <div>
+        <input type="button" class="next" id="next3" value="下一步">
+    </div>
+</div>
+<div id="content4" class="content">
+    <div>
+        <input type="button" class="next" id="next4" value="注册成功">
+    </div>
+</div>
 </body>
 </html>

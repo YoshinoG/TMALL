@@ -11,6 +11,7 @@ gulp.task("copy",function () {
     gulp.src("js/*.js").pipe(ugligy()).pipe(gulp.dest("dist/js"));
     gulp.src("sass/*.scss").pipe(sass()).pipe(clean()).pipe(gulp.dest("dist/css"));
     gulp.src("images/*.{jpg,png,gif}").pipe(gulp.dest("dist/images"));
+    gulp.src("font/**").pipe(gulp.dest("dist/font"));
 })
 gulp.task('server',function(){
     connect.server({
