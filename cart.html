@@ -2,9 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/com.jq.js"></script>
+    <script src="js/cart.js"></script>
 </head>
 <body>
+    <header>
+        <div id="top-wrap">
+            <div id="top">
+                <p>喵，欢迎来天猫</p>
+                <a href="login.html">请登录</a>
+                <a href="reg.html">免费注册</a>
+                <ul>
+                    <li class="hid">
+                        <a href="">我的淘宝</a><em></em>
+                        <div><a href="">已买到的宝贝</a><a href="">已卖出的宝贝</a></div>
+                    </li>
+                    <li>
+                        <a href="cart.html"><i>&#xe641;</i>购物车<span id="cart-num">0</span>件</a>
+                    </li>
+                    <li class="hid">
+                        <a href="">收藏夹</a><em></em>
+                        <div><a href="">收藏的宝贝</a><a href="">收藏的店铺</a></div>
+                    </li>
+                    <li>
+                        <a href=""><i>&#xe600;</i>手机版</a>
+                    </li>
+                    <li>
+                        <a href="">淘宝网</a>
+                    </li>
+                    <li class="hid">
+                        <a href="">商家支持</a><em></em>
+                        <div>
+                            <ul>
+                                <li>
+                                    <h3>商家：</h3>
+                                    <a href="">商家中心</a>
+                                    <a href="">天猫规则</a>
+                                    <a href="">商家入驻</a>
+                                    <a href="">运营服务</a>
+                                    <a href="">商家品控</a>
+                                    <a href="">商家工具</a>
+                                    <a href="">天猫智库</a>
+                                    <a href="">喵言喵语</a>
+                                </li>
+                                <li>
+                                    <h3>帮助：</h3>
+                                    <a href="">帮助中心</a>
+                                    <a href="">问商友</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hid">
+                        <a href=""><i>&#xe63c;</i>网站导航</a><em></em>
+                        <div>
+                            <div id="hot">
+                                <h2>热点推荐　Hot</h2>
+                                <ul>
+                                    <li>
+                                        <a href="">天猫超市</a><a href="">喵鲜生</a><a href=""> 科技新品 </a><a href="">女装新品</a><a href="">酷玩街</a>
+                                    </li>
+                                    <li>
+                                        <a href="">内衣新品</a><a href="">试美妆</a><a href="">运动新品</a><a href="">时尚先生</a><a href="">精明妈咪</a>
+                                    </li>
+                                    <li>
+                                        <a href="">吃乐会</a><a href="">企业采购</a><a href="">会员积分</a><a href="">天猫国际</a><a href="">品质频道</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="market">
+                                <h2>行业市场　Market</h2>
+                                <ul>
+                                    <li>
+                                        <a href="">美妆</a><a href="">电器</a><a href="">女装</a><a href="">男装</a><a href="">女鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="">男鞋</a><a href="">内衣</a><a href="">箱包</a><a href="">运动</a><a href="">母婴</a>
+                                    </li>
+                                    <li>
+                                        <a href="">家装</a><a href="">医药</a><a href="">食品</a><a href="">配饰</a><a href="">汽车</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="help">
+                                <h2>服务指南　Help</h2>
+                                <ul>
+                                    <li>
+                                        <a href="">帮助中心</a><a href="">品质保障</a>
+                                    </li>
+                                    <li>
+                                        <a href="">特色服务</a><a href="">7天退换货</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h1>
+                <a href="index.html"></a>
+            </h1>
+            <div>
+                <ul>
+                    <li>宝贝</li>
+                    <li>天猫</li>
+                    <li>店铺</li>
+                </ul>
+                <input type="text" id="search-txt">
+                <button id="search-btn">搜索</button>
+            </div>
+        </div>
+    </header>
+        <div id="contect">
+            <div class="tit">
+                <div>
+                    <input type="checkbox" id="all" class="all">
+                    <label for="all">全选</label>
+                </div>
+                <div>商品信息</div>
+                <div>单价</div>
+                <div>数量</div>
+                <div>金额</div>
+                <div>操作</div>
+            </div>
+            <div id="main">
+                <!--<ul class="item">-->
+                    <!--<li>-->
+                        <!--<input type="checkbox">-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href=""><img src="" alt=""></a>-->
+                        <!--<a href="">万代/BANDAI 1/100 MG 独角兽高达</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
 
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--￥998-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<p>-->
+                            <!--<span>-</span>-->
+                            <!--<input type="text" id="number">-->
+                            <!--<span>+</span>-->
+                        <!--</p>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--￥998-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">删除</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+        <div id="bottom">
+            <div>
+                <input type="checkbox" id="all2" class="all">
+                <label for="all2">全选</label>
+            </div>
+            <div>
+                <div>
+                    已选<span id="number">0</span>件商品
+                </div>
+                <div>
+                    合计(不含运费):<span id="total">0.00</span>
+                </div>
+                <button id="all-pay">结算</button>
+            </div>
+        </div>
 </body>
 </html>

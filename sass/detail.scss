@@ -1,0 +1,155 @@
+@import "common";
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/font-index/iconfont.eot');
+  src: url('../font/font-index/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/font-index/iconfont.woff') format('woff'),
+  url('../font/font-index/iconfont.ttf') format('truetype'),
+  url('../font/font-index/iconfont.svg#iconfont') format('svg');
+}
+
+#content{
+  overflow: hidden;
+}
+img{
+  margin: 0;
+  display: block;
+  border: 0;
+}
+#img-wrap{
+  width: 400px;
+  margin: 30px 30px 0 30px;
+  border: 1px solid #cecece;
+  position: relative;
+  float: left;
+}
+#mid{
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+#mid img{
+  width: 400px;
+  height: 400px;
+}
+#zoom{
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  opacity: .5;
+  display: none;
+  position: absolute;
+}
+#small{
+  width: 400px;
+}
+#small img{
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  float: left;
+}
+#big{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -1px;
+  border: 1px solid #cecece;
+  left: 400px;
+  overflow: hidden;
+  display: none;
+}
+#big img{
+  width: 800px;
+  height: 800px;
+  position: absolute;
+}
+
+#main{
+  float: left;
+  width: 600px;
+  height: 400px;
+  margin: 30px;
+  h2{
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    text-indent: 10px;
+    margin: 5px 0;
+  }
+  #price{
+    background: #f5f5f5;
+    height: auto;
+    padding: 3px;
+    div{
+      font-size: 12px;
+      color: #999;
+      span{
+        padding-left: 30px;
+      }
+      &:nth-child(1) span{
+        font-size: 12px;
+        color: #333;
+        text-decoration: line-through;
+      }
+      &:nth-child(2) span{
+        font-size: 20px;
+        color: #f00;
+        font-weight: 700;
+      }
+      &:nth-child(3) span{
+        font-size: 16px;
+        color: #f00;
+      }
+    }
+  }
+  div{
+    height: 30px;
+    margin: 8px 0;
+    span{
+      padding-left: 30px;
+    }
+  }
+  .pj{
+    height: 40px;
+    border-top: 1px dashed #cecece;
+    border-bottom: 1px dashed #cecece;
+    p{
+      float: left;
+      width: 33%;
+      height: 30px;
+      margin: 5px 0;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      border-right: 1px dashed #cecece;
+      span{
+        color: #f00;
+      }
+      &:last-child{
+        border: 0;
+        span{
+          color: green;
+        }
+      }
+    }
+  }
+  >div:last-child{
+    text-align: center;
+    height: 40px;
+    input{
+      width: 200px;
+      height: 40px;
+      font-size: 20px;
+      color: #fff;
+      background: #f00;
+      border: 1px solid #f00;
+    }
+    input:nth-child(1){
+      background: rgba(255,0,0,0.1);
+      color: #333;
+    }
+  }
+}

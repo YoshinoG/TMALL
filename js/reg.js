@@ -3,6 +3,7 @@ $(function(){
     var $tit = $("header p");
     var pwd = "";
     var username = "";
+    var user_id = 0;
     $("#user-pact>span").click(function () {
         $(location).attr("href","index.html");
     })
@@ -126,6 +127,7 @@ $(function(){
                     password:pwd
                 },
                 success:function (data) {
+                    user_id=data["data"][0];
                     console.log(data);
                     if(data["code"]==0){
                         $("#content2").next().css("display","block").siblings(".content").css("display","none");
@@ -144,32 +146,20 @@ $(function(){
     })
 
     $("#next4").click(function () {
-        $.ajax({
-            type:"get",
-            url:"http://h6.duchengjiu.top/shop/api_userinfo.php",
-            data:{
-                status:"Info",
-                username:username
-            },
-            success:function (data) {
-                // $(location).attr("href","index.html?user_id="+data["data"]["user_id"]);
-                console.log(data);
-            }
-        });
+        setCookie("user_id",user_id);
+        $(location).attr("href","index.html");
+        // $.ajax({
+        //     type:"get",
+        //     url:"http://h6.duchengjiu.top/shop/api_userinfo.php",
+        //     data:{
+        //         status:"info",
+        //         username:username
+        //     },
+        //     success:function (data) {
+        //             $(location).attr("href","index.html");
+        //             setCookie("user_id",data["data"]["user_id"]);
+        //         console.log(data);
+        //     }
+        // });
     })
-    $.ajax({
-        type:"get",
-        url:"http://h6.duchengjiu.top/shop/api_userinfo.php",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        data:{
-            status:"Info",
-            username:"gz"
-        },
-        success:function (data) {
-            // $(location).attr("href","index.html?user_id="+data["data"]["user_id"]);
-            console.log(data);
-        }
-    });
 })

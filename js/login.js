@@ -24,31 +24,17 @@ $(function () {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             data:{
-                status:"Login",
+                status:"login",
                 username:$("#username").val(),
                 password:$("#pwd").val()
             },
             success:function (data) {
-                console.log(data);
                 if(data.code==0){
-                    $(location).attr("href","index.html?user_id="+data["data"]["user_id"]);
+                    console.log("aa");
+                    $(location).attr("href","index.html");
+                    setCookie("user_id",data["data"]["username"]);
                 }
             }
         })
-    })
-    $.ajax({
-        type:"post",
-        url:"http://h6.duchengjiu.top/shop/api_user.php",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        data:{
-            status:"Login",
-            username:"gzjj",
-            password:"123123"
-        },
-        success:function (data) {
-            console.log(data);
-        }
     })
 })

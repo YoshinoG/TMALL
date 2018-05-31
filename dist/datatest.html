@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datatest</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    // $.ajax({
+    //     url: "http://h6.duchengjiu.top/shop/api_cat.php",
+    //     type: "GET",
+    //     // dataType: "jsonp",
+    //     success:function (data) {
+    //         console.log(data);
+    //     }
+    // })
+    // $.ajax({
+    //     url: "http://h6.duchengjiu.top/shop/api_goods.php",
+    //     type: "GET",
+    //     data:{
+    //         cat_id:45,
+    //         page:1,
+    //         pagesize:10
+    //     },
+    //     // dataType: "jsonp",
+    //     success:function (data) {
+    //         console.log(data);
+    //     }
+    // })
+    $.ajax({
+        type:"get",
+        url: "http://h6.duchengjiu.top/shop/api_userinfo.php",
+        data:{
+            status:"info",
+            username:"gzjj"
+        },
+        success:function (data) {
+            console.log(data);
+        }
+    })
+</script>
+</body>
+</html>

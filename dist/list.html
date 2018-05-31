@@ -2,9 +2,451 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>商品列表</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/getUrlParms.js"></script>
+    <script src="js/listfn.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/com.jq.js"></script>
+    <script src="js/list.js"></script>
 </head>
 <body>
+<header>
+    <div id="top-wrap">
+        <div id="top">
+            <p>喵，欢迎来天猫</p>
+            <a href="login.html">请登录</a>
+            <a href="reg.html">免费注册</a>
+            <ul>
+                <li class="hid">
+                    <a href="">我的淘宝</a><em></em>
+                    <div><a href="">已买到的宝贝</a><a href="">已卖出的宝贝</a></div>
+                </li>
+                <li>
+                    <a href="cart.html"><i>&#xe641;</i>购物车<span id="cart-num">0</span>件</a>
+                </li>
+                <li class="hid">
+                    <a href="">收藏夹</a><em></em>
+                    <div><a href="">收藏的宝贝</a><a href="">收藏的店铺</a></div>
+                </li>
+                <li>
+                    <a href=""><i>&#xe600;</i>手机版</a>
+                </li>
+                <li>
+                    <a href="">淘宝网</a>
+                </li>
+                <li class="hid">
+                    <a href="">商家支持</a><em></em>
+                    <div>
+                        <ul>
+                            <li>
+                                <h3>商家：</h3>
+                                <a href="">商家中心</a>
+                                <a href="">天猫规则</a>
+                                <a href="">商家入驻</a>
+                                <a href="">运营服务</a>
+                                <a href="">商家品控</a>
+                                <a href="">商家工具</a>
+                                <a href="">天猫智库</a>
+                                <a href="">喵言喵语</a>
+                            </li>
+                            <li>
+                                <h3>帮助：</h3>
+                                <a href="">帮助中心</a>
+                                <a href="">问商友</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hid">
+                    <a href=""><i>&#xe63c;</i>网站导航</a><em></em>
+                    <div>
+                        <div id="hot">
+                            <h2>热点推荐　Hot</h2>
+                            <ul>
+                                <li>
+                                    <a href="">天猫超市</a><a href="">喵鲜生</a><a href=""> 科技新品 </a><a href="">女装新品</a><a href="">酷玩街</a>
+                                </li>
+                                <li>
+                                    <a href="">内衣新品</a><a href="">试美妆</a><a href="">运动新品</a><a href="">时尚先生</a><a href="">精明妈咪</a>
+                                </li>
+                                <li>
+                                    <a href="">吃乐会</a><a href="">企业采购</a><a href="">会员积分</a><a href="">天猫国际</a><a href="">品质频道</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="market">
+                            <h2>行业市场　Market</h2>
+                            <ul>
+                                <li>
+                                    <a href="">美妆</a><a href="">电器</a><a href="">女装</a><a href="">男装</a><a href="">女鞋</a>
+                                </li>
+                                <li>
+                                    <a href="">男鞋</a><a href="">内衣</a><a href="">箱包</a><a href="">运动</a><a href="">母婴</a>
+                                </li>
+                                <li>
+                                    <a href="">家装</a><a href="">医药</a><a href="">食品</a><a href="">配饰</a><a href="">汽车</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="help">
+                            <h2>服务指南　Help</h2>
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a><a href="">品质保障</a>
+                                </li>
+                                <li>
+                                    <a href="">特色服务</a><a href="">7天退换货</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
 
+<div id="sreach-wrap">
+    <div id="sreach">
+        <img src="images/TB11ojWRXXXXXafaFXXXXXXXXXX-190-27.png" alt="预售好货">
+        <div>
+            <input type="text" id="sreach-txt" placeholder="搜索 天猫 商品/品牌/店铺">
+            <button id="sreach-btn">搜索</button>
+        </div>
+        <p><a href="">万代高达</a><span>|</span><a href="">万代手办</a><span>|</span><a href="">万代模型</a><span>|</span><a href="">mg</a><span>|</span><a href="">rg</a><span>|</span><a href="">自由</a><span>|</span><a
+                href="">扎古</a><span>|</span><a href="">pg</a></p>
+    </div>
+</div>
+
+<div id="contect">
+    <div id="change">
+        <div class="top">
+            <a href="">全部</a><span>&gt;</span>
+            <div>
+                <input type="text"><a href="">&#xe6e4;</a>
+            </div>
+            <p>共<span>4396</span>件相关商品</p>
+        </div>
+        <div id="table">
+            <div>
+                <div class="tit"><i>&#xe790;</i><a href="">模型/动漫</a></div>
+                <ul>
+                    <li><a href="">高达模型专区</a></li>
+                    <li><a href="">其他拼装/组装模型</a></li>
+                    <li><a href="">新世纪福音战士</a></li>
+                    <li><a href="">变形机器人</a></li>
+                    <li><a href="">圣斗士星矢</a></li>
+                    <li><a href="">手办/人偶/BJD/摆件</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="tit"><i>&#xe790;</i>其他分类</div>
+                <ul>
+                    <li><a href="">居家日用/节日用品</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="tit">玩具系列</div>
+                <ul>
+                    <li><a href="">SD三国传系</a></li>
+                    <li><a href="">PG版</a></li>
+                    <li><a href="">SD武装系列</a></li>
+                    <li><a href="">BB战士系列</a></li>
+                    <li><a href="">HGUC版</a></li>
+                    <li><a href="">FG初级版</a></li>
+                    <li><a href="">MG版</a></li>
+                    <li><a href="">景品</a></li>
+                    <li><a href="">Figuarts Zero</a></li>
+                    <a href="">更多<i>&#xe620;</i></a>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="top">
+                <p>
+                    <a href="">综合<i>&#xe6da;</i></a>
+                    <a href="">人气<i>&#xe6da;</i></a>
+                    <a href="">新品<i>&#xe6da;</i></a>
+                    <a href="">销量<i>&#xe6da;</i></a>
+                    <a href="">价格<i>&#xe60b;</i></a>
+                </p>
+                <p>
+                    <span>收货地：</span>
+                    <input type="text" id="add" placeholder="杭州">
+                </p>
+                <p>
+                    <input type="text" name="" id="price1" placeholder="￥请输入">
+                    <input type="text" name="" id="price2" placeholder="￥请输入">
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="618">
+                        <img src="images/TB1ybP.pTtYBeNjy1XdXXXXyVXa-72-36.png" alt="">
+                    </label>
+                    <label>
+                        <input type="checkbox" id="jt">
+                        <img src="images/TB1oswapTtYBeNjy1XdXXXXyVXa-182-36.png" alt="">
+                    </label>
+                    <a href="">更多</a>
+                    <label>
+                        <input type="checkbox" >
+                        包邮
+                    </label>
+                    <label>
+                        <input type="checkbox" >
+                        折扣
+                    </label>
+                    <label>
+                        <input type="checkbox" >
+                        满减
+                    </label>
+                </p>
+                <p>
+                    <a href=""><i>&#xe6cd;</i>店铺</a>
+                    <a href=""><i>&#xe6e2;</i>大图</a>
+                    <a href=""><i>&#xe61d;</i>小图</a>
+                </p>
+            </div>
+            <div class="cont">
+                <!--<div class="item-wrap"><figure class="item1"><a href=""><img></a><figcaption><p>￥8888</p><a href="">爱分叉</a><a href="">xxx旗舰店</a><div><p>月成交<span>999笔</span></p><p>评价 <span>123</span></p><p>&#xe727;</p></div></figcaption></figure></div>-->
+                <!--<div class="item-wrap">-->
+                    <!--<figure class="item1">-->
+                        <!--<a href="">-->
+                            <!--<img>-->
+                        <!--</a>-->
+                        <!--<figcaption>-->
+                            <!--<p>￥8888</p>-->
+                            <!--<a href="">爱分叉</a>-->
+                            <!--<a href="">xxx旗舰店</a>-->
+                            <!--<div>-->
+                                <!--<p>月成交<span>999笔</span></p>-->
+                                <!--<p>评价 <span>123</span></p>-->
+                                <!--<p>&#xe727;</p>-->
+                            <!--</div>-->
+                        <!--</figcaption>-->
+                    <!--</figure>-->
+                <!--</div>-->
+                <!--<div class="item-wrap">-->
+                    <!--<figure class="item1">-->
+                        <!--<a href="">-->
+                            <!--<img>-->
+                        <!--</a>-->
+                        <!--<figcaption>-->
+                            <!--<p>￥8888</p>-->
+                            <!--<a href="">爱分叉</a>-->
+                            <!--<a href="">xxx旗舰店</a>-->
+                            <!--<div>-->
+                                <!--<p>月成交<span>999笔</span></p>-->
+                                <!--<p>评价 <span>123</span></p>-->
+                                <!--<p>&#xe727;</p>-->
+                            <!--</div>-->
+                        <!--</figcaption>-->
+                    <!--</figure>-->
+                <!--</div>-->
+                <!--<div class="item-wrap">-->
+                    <!--<figure class="item1">-->
+                        <!--<a href="">-->
+                            <!--<img>-->
+                        <!--</a>-->
+                        <!--<figcaption>-->
+                            <!--<p>￥8888</p>-->
+                            <!--<a href="">爱分叉</a>-->
+                            <!--<a href="">xxx旗舰店</a>-->
+                            <!--<div>-->
+                                <!--<p>月成交<span>999笔</span></p>-->
+                                <!--<p>评价 <span>123</span></p>-->
+                                <!--<p>&#xe727;</p>-->
+                            <!--</div>-->
+                        <!--</figcaption>-->
+                    <!--</figure>-->
+                <!--</div>-->
+                <!--<div class="item-wrap">-->
+                    <!--<figure class="item1">-->
+                        <!--<a href="">-->
+                            <!--<img>-->
+                        <!--</a>-->
+                        <!--<figcaption>-->
+                            <!--<p>￥8888</p>-->
+                            <!--<a href="">爱分叉</a>-->
+                            <!--<a href="">xxx旗舰店</a>-->
+                            <!--<div>-->
+                                <!--<p>月成交<span>999笔</span></p>-->
+                                <!--<p>评价 <span>123</span></p>-->
+                                <!--<p>&#xe727;</p>-->
+                            <!--</div>-->
+                        <!--</figcaption>-->
+                    <!--</figure>-->
+                <!--</div>-->
+                <!--<div class="item-wrap">-->
+                    <!--<figure class="item1">-->
+                        <!--<a href="">-->
+                            <!--<img>-->
+                        <!--</a>-->
+                        <!--<figcaption>-->
+                            <!--<p>￥8888</p>-->
+                            <!--<a href="">爱分叉</a>-->
+                            <!--<a href="">xxx旗舰店</a>-->
+                            <!--<div>-->
+                                <!--<p>月成交<span>999笔</span></p>-->
+                                <!--<p>评价 <span>123</span></p>-->
+                                <!--<p>&#xe727;</p>-->
+                            <!--</div>-->
+                        <!--</figcaption>-->
+                    <!--</figure>-->
+                <!--</div>-->
+
+            </div>
+            <!--<div id="page-wrap">-->
+                <!--<div id="page">-->
+                    <!--<p>-->
+                        <!--<a href="">上一页</a>-->
+                        <!--<a href="">1</a>-->
+                        <!--<a href="">2</a>-->
+                        <!--<a href="">3</a>-->
+                        <!--<a href="">下一页</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div id="ensure">
+    <a href=""></a><a href=""></a><a href=""></a><a href=""></a>
+</div>
+
+<div id="desc-wrap">
+    <div id="desc">
+        <ul>
+            <li><a href=""><b>购物指南</b></a></li>
+            <li><a href="">免费注册</a></li>
+            <li><a href="">开通支付宝</a></li>
+            <li><a href="">支付宝充值</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><b>天猫保障</b></a></li>
+            <li><a href="">发票保障</a></li>
+            <li><a href="">售后规则</a></li>
+            <li><a href="">缺货赔偿</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><b>支付方式</b></a></li>
+            <li><a href="">快捷支付</a></li>
+            <li><a href="">信用卡</a></li>
+            <li><a href="">余额宝</a></li>
+            <li><a href="">蚂蚁花呗</a></li>
+            <li><a href="">货到付款</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><b>商家服务</b></a></li>
+            <li><a href="">天猫规则</a></li>
+            <li><a href="">商家入驻</a></li>
+            <li><a href="">商家中心</a></li>
+            <li><a href="">天猫智库</a></li>
+            <li><a href="">物流服务</a></li>
+            <li><a href="">妙言妙语</a></li>
+            <li><a href="">运营服务</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><b>手机天猫</b></a></li>
+            <li><img src="images/TB14VZKHXXXXXcAXXXX64VRZFXX-105-105.png" alt=""></li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer-wrap">
+    <footer>
+        <p><a href="">关于天猫</a><a href=""> 帮助中心</a><a href="">开放平台</a><a href="">诚聘英才</a><a href="">联系我们</a><a href="">网站合作</a><a href="">法律声明</a><a href="">隐私权政策</a><a href="">知识产权</a><a href="">廉正举报</a></p>
+        <p><a href="">阿里巴巴集团</a>|<a href="">淘宝网</a>|<a href="">天猫</a>|<a href="">聚划算</a>|<a href="">全球速卖通</a>|<a href="">阿里巴巴国际交易市场</a>|<a href="">1688</a>|<a href="">阿里妈妈</a>|<a href="">飞猪</a>|<a href="">阿里云计算</a>|<a href="">AliOS</a>\<a href="">阿里通信</a>|<a href="">万网</a>|<a href="">高德</a>|<a href="">UC</a>|<a
+                href="">友盟</a>|<a href="">虾米</a>|<a href="">钉钉</a>|<a href="">支付宝</a></p>
+        <p><span>增值电信业务经营许可证：</span><a href="">浙B2-20110446</a> <span>网络文化经营许可证：</span><a href="">浙网文[2015]0295-065号</a>
+            <a href="">12318举报</a> <span>出版物网络交易平台服务经营备案证：</span><a href="">新出发浙备字第001号</a> </p>
+        <p><span>互联网违法和不良信息举报电话：0571-81683755 blxxjb@alibaba-inc.com </span><span>互联网药品信息服务资质证书编号：</span><a
+                href="">浙-（经营性）-2017-0005</a><a href=""><img src="images/TB1yEqRPXXXXXXPXpXXXXXXXXXX-20-20.png" alt="">浙公网安备 33010002000120号</a></p>
+        <p>（浙）网械平台备字[2018]第00002号</p>
+        <p>© 2003-2018 TMALL.COM 版权所有</p>
+    </footer>
+</div>
+
+<!--侧边栏-->
+<div id="aside">
+    <ul id="aside-top">
+        <li>
+            <a href="#" data-toggle="tooltip1" data-placement="left" title="会员权益">&#xe739;</a>
+        </li>
+        <li>
+            <a href="cart.html"><i>&#xe654;</i>购物车</a>
+        </li>
+        <li>
+            <a href="#" data-toggle="tooltip2" data-placement="left" title="我的资产">&#xe6cb;</a>
+        </li>
+        <li>
+            <a href="#" data-toggle="tooltip3" data-placement="left" title="我的收藏">&#xe642;</a>
+        </li>
+        <li>
+            <a href="#" data-toggle="tooltip4" data-placement="left" title="我看过的">&#xe64c;</a>
+        </li>
+        <li>
+            <a href="#" data-toggle="tooltip5" data-placement="left" title="我要充值">&#xe612;</a>
+        </li>
+    </ul>
+    <ul id="aside-bottom">
+        <li>
+            <a href="#" data-toggle="tooltip6" data-placement="left" title="用户反馈">&#xe60c;</a>
+        </li>
+        <li>
+            <a href="">&#xe601;</a>
+        </li>
+        <li>
+            <a href="#" id="toTop" data-toggle="tooltip7" data-placement="left" title="返回顶部">&#xe608;</a>
+        </li>
+    </ul>
+</div>
+<div class="tooltip top" role="tooltip7">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        返回顶部
+    </div>
+</div>
+<div class="tooltip top" role="tooltip6">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        用户反馈
+    </div>
+</div>
+<div class="tooltip top" role="tooltip5">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        我要充值
+    </div>
+</div>
+<div class="tooltip top" role="tooltip4">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        我看过的
+    </div>
+</div>
+<div class="tooltip top" role="tooltip3">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        我的收藏
+    </div>
+</div>
+<div class="tooltip top" role="tooltip2">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        我的资产
+    </div>
+</div>
+<div class="tooltip top" role="tooltip1">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        会员权益
+    </div>
+</div>
 </body>
 </html>
